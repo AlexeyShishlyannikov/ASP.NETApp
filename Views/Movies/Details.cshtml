@@ -1,0 +1,15 @@
+﻿@model WebApplication1.ViewModels.MoviesViewModel
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.MovieDetails.Name</h2>
+
+<ul>
+    <li>Genre: @Model.MovieDetails.Genre</li>
+    <li>Released Date: @Model.MovieDetails.ReleasedDate.ToString("d")</li>
+    <li>Date Added: @Model.MovieDetails.DateAdded.ToString("d")</li>
+    <li>Number in stock: @Model.MovieDetails.NumberInStock</li>
+</ul>
+

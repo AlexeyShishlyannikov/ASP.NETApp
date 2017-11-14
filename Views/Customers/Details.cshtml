@@ -1,0 +1,15 @@
+﻿@model WebApplication1.ViewModels.CustomersViewModel
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.CustomerInfo.Name</h2>
+
+<ul>
+    <li>Membership Type: @Model.CustomerInfo.MembershipType.Name</li>
+    @if (Model.CustomerInfo.BirthDate != null)
+    {
+        <li>Birthdate: @Model.CustomerInfo.BirthDate.Value.Date.ToString("d")</li>
+    }
+</ul>
